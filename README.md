@@ -17,27 +17,33 @@ This sample has been built with the following versions:
 - Spark Cassandra Connector Assembly 1.6.4
 - Cassandra 2.1.5
 
-To build this:
+**To build this:**
 
 Clone the repository:
-cd ~
-git clone https://github.com/jayavasu/KafkaSparkCassandraLogAnalysis.git
+*cd ~
+git clone https://github.com/jayavasu/KafkaSparkCassandraLogAnalysis.git*
+
 Build the project:
-cd KafkaSparkCassandraLogAnalysis
-sbt assembly
+
+*cd KafkaSparkCassandraLogAnalysis
+sbt assembly*
 
 It requires you to create a topic called "test" in kafka
+
 kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 
 
 Publish any log file like the following in a kafka console.
+
 kafka-console-producer.sh --broker-list localhost:9092 --topic test > controller.log
 
 
-Run the sample
+**Run the sample**
 
 Open another console window, submit your Spark job:
+
 cd ~/LogAnalysisKafkaSparkCassandra
+
 ~/spark-2.0.0-bin-hadoop2.7/bin/spark-submit --properties-file spark.conf --class LogAnalysisKafkaSparkCassandra target/scala-2.11/spark-cassandra-connector-assembly-1.6.4.jar
 
 In cassandra you can see the results in LogAnalysis.log_error_count and also the result will be printed in the spark console.
