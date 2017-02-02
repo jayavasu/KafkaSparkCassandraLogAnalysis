@@ -21,9 +21,9 @@ This sample has been built with the following versions:
 
 Clone the repository:
 
-*cd ~
+*cd ~*
 
-git clone https://github.com/jayavasu/KafkaSparkCassandraLogAnalysis.git*
+*git clone https://github.com/jayavasu/KafkaSparkCassandraLogAnalysis.git*
 
 **Build the project:**
 
