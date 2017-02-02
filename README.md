@@ -17,10 +17,12 @@ This sample has been built with the following versions:
 - Spark Cassandra Connector Assembly 1.6.4
 - Cassandra 2.1.5
 
-**<h4>To build this:**
+**<h4>To build this:<h4>**
 
 Clone the repository:
+
 *cd ~
+
 git clone https://github.com/jayavasu/KafkaSparkCassandraLogAnalysis.git*
 
 **Build the project:**
