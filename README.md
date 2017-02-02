@@ -25,17 +25,17 @@ git clone https://github.com/jayavasu/KafkaSparkCassandraLogAnalysis.git*
 
 Build the project:
 
-*cd KafkaSparkCassandraLogAnalysis
-sbt assembly*
+*cd KafkaSparkCassandraLogAnalysis*
+*sbt assembly*
 
 It requires you to create a topic called "test" in kafka
 
-kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+*kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test*
 
 
 Publish any log file like the following in a kafka console.
 
-kafka-console-producer.sh --broker-list localhost:9092 --topic test > controller.log
+*kafka-console-producer.sh --broker-list localhost:9092 --topic test > controller.log*
 
 
 **Run the sample**
